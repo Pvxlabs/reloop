@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RELOOP — The Vintage Archive</title>
+  <meta name="description" content="A curated archive of fine vintage bags, jewellery and timepieces, arranged by the decade that made them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cover / opening page -->
+  <div id="cover" class="cover" aria-hidden="false">
+    <div class="cover__inner">
+      <p class="cover__kicker">A Curated Archive of Fine Vintage</p>
+      <h1 class="cover__title">RELOOP</h1>
+      <div class="cover__rule" aria-hidden="true"><span></span></div>
+      <p class="cover__sub">Bags, jewellery &amp; timepieces — objects with a story, arranged by the decade that made them.</p>
+      <button id="enter" class="cover__enter">Enter the Archive</button>
+    </div>
+    <p class="cover__edition">Issue No. 01 &middot; The Decades &middot; 1950&ndash;1980</p>
+    <p class="cover__hint" aria-hidden="true">Scroll to travel through time &rarr;</p>
+  </div>
+
+  <!-- Fixed chrome -->
+  <header class="chrome">
+    <a class="chrome__brand" href="#" id="brand">RELOOP</a>
+    <nav class="chrome__nav" id="chromeNav" aria-label="Decades"></nav>
+  </header>
+
+  <!-- Timeline -->
+  <main id="timeline" class="timeline" aria-label="Vintage archive timeline"></main>
+
+  <!-- Decade ruler -->
+  <div class="ruler" id="ruler">
+    <div class="ruler__track" id="rulerTrack"></div>
+    <div class="ruler__pointer" id="rulerPointer" aria-hidden="true"></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="lightbox__scrim"></div>
+    <figure class="lightbox__body" role="dialog" aria-modal="true" aria-labelledby="lightboxName">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+      <div class="lightbox__media"><img id="lightboxImg" src="" alt=""></div>
+      <figcaption class="lightbox__meta">
+        <p class="lightbox__cat" id="lightboxCat"></p>
+        <h2 class="lightbox__name" id="lightboxName"></h2>
+        <p class="lightbox__desc" id="lightboxDesc"></p>
+        <dl class="lightbox__specs" id="lightboxSpecs"></dl>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
